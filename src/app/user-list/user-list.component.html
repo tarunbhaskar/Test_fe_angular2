@@ -1,0 +1,37 @@
+<div >
+      
+            <ul class="nav nav-pills">
+  <li style="font-size:20px">Users</li>
+  <li  style="float:right"><button class="btn btn-default">+Add User</button></li>
+  
+</ul>
+
+<table class="table table-striped">
+            <thead>
+              <tr>
+                <th></th>
+                <th>NAME</th>
+                <th>EMAIL</th>
+                <th>CITY</th>
+                <th>COMPANY</th>
+                <th>Delete User</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let user of _users">
+              <td><img src="{{user.profilePic}}" class="circle"></td>
+                <td>{{user.firstName}} {{user.lastName}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.address.city}}</td>
+                <td>{{user.company.name}}</td>
+                
+                <td><i class="glyphicon glyphicon-remove"></i></td>
+              </tr>
+
+
+            </tbody>
+
+
+
+          </table>
+    </div>
